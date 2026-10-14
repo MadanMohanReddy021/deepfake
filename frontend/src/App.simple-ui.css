@@ -1,0 +1,105 @@
+/* VERITY UI refresh. This file supplements the existing App.css. */
+.analysis-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  margin: 24px 0;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.analysis-tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex: 1;
+  min-height: 46px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.analysis-tabs button.active {
+  background: #fff;
+  color: #0f172a;
+  box-shadow: 0 1px 4px rgb(15 23 42 / 10%);
+}
+
+.analysis-tabs button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.compact-hero { margin-bottom: 8px; }
+.image-workspace { align-items: start; }
+.upload-hint { margin: 12px 0 0; color: #64748b; font-size: 12px; line-height: 1.5; }
+
+.advanced-details {
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.advanced-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+.advanced-details > summary::-webkit-details-marker { display: none; }
+.advanced-details > summary span { display: inline-flex; align-items: center; gap: 9px; }
+.advanced-details[open] > summary { border-bottom: 1px solid #e2e8f0; }
+.advanced-details[open] > summary > svg { transform: rotate(180deg); }
+.advanced-details > summary > svg { transition: transform 160ms ease; }
+.advanced-content { display: grid; gap: 20px; padding: 16px; }
+.advanced-content .forensics-section,
+.advanced-content .findings-section { margin: 0; }
+.advanced-content .forensics-card { margin-top: 12px; }
+
+.forensics-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+.forensics-metric > span { color: #64748b; font-size: 12px; line-height: 1.4; }
+.forensics-metric > strong { overflow-wrap: anywhere; color: #0f172a; font-size: 14px; }
+
+.video-workspace { display: grid; gap: 18px; }
+.video-intro { padding: 20px; border: 1px solid #e2e8f0; border-radius: 14px; background: #fff; }
+.video-intro > p { margin: 10px 0 0; color: #64748b; font-size: 14px; line-height: 1.65; }
+.video-workspace > :not(.video-intro) { min-width: 0; }
+
+@media (max-width: 760px) {
+  .analysis-tabs { margin: 18px 0; }
+  .analysis-tabs button { padding: 10px 8px; font-size: 13px; }
+  .advanced-content { padding: 12px; }
+  .video-intro { padding: 16px; }
+}
+
+@media (max-width: 420px) {
+  .analysis-tabs button { gap: 6px; }
+  .analysis-tabs button svg { width: 16px; height: 16px; }
+  .advanced-details > summary { padding: 13px; }
+}
